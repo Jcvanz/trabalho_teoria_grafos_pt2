@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_20d86079869548c8d3511c6633981ba6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_20d86079869548c8d3511c6633981ba6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_20d86079869548c8d3511c6633981ba6 = L.map(
+                "map_20d86079869548c8d3511c6633981ba6",
+                {
+                    center: [-28.39123, -49.393544],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c2b176b5fadbc05a54d0a554fd8fac4e = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c2b176b5fadbc05a54d0a554fd8fac4e.addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            var marker_97d8d43b161a021612842d2adad26316 = L.marker(
+                [-28.393847, -49.397042],
+                {
+}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            var icon_568aea2838240e8c40d76c7eeb3cb5af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ec10cb044b828e0b0eb8e834f3dc3717 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_919ff4b71460771f6d8842d0db609ca2 = $(`<div id="html_919ff4b71460771f6d8842d0db609ca2" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1e1e24; color: #ffffff; border-radius: 8px; border: 1px solid #2d2d3a; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #ff0055; font-size: 13px; font-weight: bold; border-bottom: 1px solid #2d2d3a; padding-bottom: 4px;">Hospital Henrique Lage</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Tipo:</b> Hospital</p>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Bairro:</b> Cairu</p>             <p style="margin: 5px 0 0 0; font-size: 9px; color: #888888; font-family: monospace;">-28.39385, -49.39704</p>         </div>         </div>`)[0];
+                popup_ec10cb044b828e0b0eb8e834f3dc3717.setContent(html_919ff4b71460771f6d8842d0db609ca2);
+            
+        
+
+        marker_97d8d43b161a021612842d2adad26316.bindPopup(popup_ec10cb044b828e0b0eb8e834f3dc3717)
+        ;
+
+        
+    
+    
+            marker_97d8d43b161a021612842d2adad26316.bindTooltip(
+                `<div>
+                     Hospital Henrique Lage
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_97d8d43b161a021612842d2adad26316.setIcon(icon_568aea2838240e8c40d76c7eeb3cb5af);
+            
+    
+            var marker_692be1836cc42852bfb8221f31f06f80 = L.marker(
+                [-28.39123, -49.393544],
+                {
+}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            var icon_a29adbf199810b7432b37d2324ef74a3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_164c526f7e5f678ad4899234ee7e4cb7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_214c3d852f477b9fbfec16df259252bf = $(`<div id="html_214c3d852f477b9fbfec16df259252bf" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1e1e24; color: #ffffff; border-radius: 8px; border: 1px solid #2d2d3a; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #00bfff; font-size: 13px; font-weight: bold; border-bottom: 1px solid #2d2d3a; padding-bottom: 4px;">ESF Centro</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Tipo:</b> Saúde</p>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Bairro:</b> Centro</p>             <p style="margin: 5px 0 0 0; font-size: 9px; color: #888888; font-family: monospace;">-28.39123, -49.39354</p>         </div>         </div>`)[0];
+                popup_164c526f7e5f678ad4899234ee7e4cb7.setContent(html_214c3d852f477b9fbfec16df259252bf);
+            
+        
+
+        marker_692be1836cc42852bfb8221f31f06f80.bindPopup(popup_164c526f7e5f678ad4899234ee7e4cb7)
+        ;
+
+        
+    
+    
+            marker_692be1836cc42852bfb8221f31f06f80.bindTooltip(
+                `<div>
+                     ESF Centro
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_692be1836cc42852bfb8221f31f06f80.setIcon(icon_a29adbf199810b7432b37d2324ef74a3);
+            
+    
+            var marker_3dccf611ffd327cb62d9ab4494e9a55b = L.marker(
+                [-28.414881, -49.412235],
+                {
+}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            var icon_8f0d5a90384b1e0c6e998cb968893ee4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_81032e25156f288be5812546a9d6e09a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b77aa6e33e24844832b9ca4d8c573232 = $(`<div id="html_b77aa6e33e24844832b9ca4d8c573232" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1e1e24; color: #ffffff; border-radius: 8px; border: 1px solid #2d2d3a; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #00bfff; font-size: 13px; font-weight: bold; border-bottom: 1px solid #2d2d3a; padding-bottom: 4px;">ESF Barro Branco</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Tipo:</b> Saúde</p>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Bairro:</b> Barro Branco</p>             <p style="margin: 5px 0 0 0; font-size: 9px; color: #888888; font-family: monospace;">-28.41488, -49.41224</p>         </div>         </div>`)[0];
+                popup_81032e25156f288be5812546a9d6e09a.setContent(html_b77aa6e33e24844832b9ca4d8c573232);
+            
+        
+
+        marker_3dccf611ffd327cb62d9ab4494e9a55b.bindPopup(popup_81032e25156f288be5812546a9d6e09a)
+        ;
+
+        
+    
+    
+            marker_3dccf611ffd327cb62d9ab4494e9a55b.bindTooltip(
+                `<div>
+                     ESF Barro Branco
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3dccf611ffd327cb62d9ab4494e9a55b.setIcon(icon_8f0d5a90384b1e0c6e998cb968893ee4);
+            
+    
+            var marker_b9e4287fd63ed2db4a3ce6b2dfb32031 = L.marker(
+                [-28.381083, -49.438467],
+                {
+}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            var icon_603d115dfd1ea138ca4e4d1123985d9b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_30cc0ab8bcd1697cf8f87a28a7cb209e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6c82ccf9ec9a12cd0548dfbb4c7ee432 = $(`<div id="html_6c82ccf9ec9a12cd0548dfbb4c7ee432" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1e1e24; color: #ffffff; border-radius: 8px; border: 1px solid #2d2d3a; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #00bfff; font-size: 13px; font-weight: bold; border-bottom: 1px solid #2d2d3a; padding-bottom: 4px;">ESF Guatá</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Tipo:</b> Saúde</p>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Bairro:</b> Guatá</p>             <p style="margin: 5px 0 0 0; font-size: 9px; color: #888888; font-family: monospace;">-28.38108, -49.43847</p>         </div>         </div>`)[0];
+                popup_30cc0ab8bcd1697cf8f87a28a7cb209e.setContent(html_6c82ccf9ec9a12cd0548dfbb4c7ee432);
+            
+        
+
+        marker_b9e4287fd63ed2db4a3ce6b2dfb32031.bindPopup(popup_30cc0ab8bcd1697cf8f87a28a7cb209e)
+        ;
+
+        
+    
+    
+            marker_b9e4287fd63ed2db4a3ce6b2dfb32031.bindTooltip(
+                `<div>
+                     ESF Guatá
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b9e4287fd63ed2db4a3ce6b2dfb32031.setIcon(icon_603d115dfd1ea138ca4e4d1123985d9b);
+            
+    
+            var marker_22935fd20369c3af5fde5684c9a1c0ad = L.marker(
+                [-28.390549, -49.381129],
+                {
+}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            var icon_ac5bbe9595f22ac4c89988d4a3baf732 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b93b4bc0aa19d666001bf8fb9354ef98 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_22818a5610d9d9f0eee41a3afd93fe1a = $(`<div id="html_22818a5610d9d9f0eee41a3afd93fe1a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1e1e24; color: #ffffff; border-radius: 8px; border: 1px solid #2d2d3a; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #00bfff; font-size: 13px; font-weight: bold; border-bottom: 1px solid #2d2d3a; padding-bottom: 4px;">ESF Arizona</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Tipo:</b> Saúde</p>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Bairro:</b> Arizona</p>             <p style="margin: 5px 0 0 0; font-size: 9px; color: #888888; font-family: monospace;">-28.39055, -49.38113</p>         </div>         </div>`)[0];
+                popup_b93b4bc0aa19d666001bf8fb9354ef98.setContent(html_22818a5610d9d9f0eee41a3afd93fe1a);
+            
+        
+
+        marker_22935fd20369c3af5fde5684c9a1c0ad.bindPopup(popup_b93b4bc0aa19d666001bf8fb9354ef98)
+        ;
+
+        
+    
+    
+            marker_22935fd20369c3af5fde5684c9a1c0ad.bindTooltip(
+                `<div>
+                     ESF Arizona
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_22935fd20369c3af5fde5684c9a1c0ad.setIcon(icon_ac5bbe9595f22ac4c89988d4a3baf732);
+            
+    
+            var marker_af64eec40615e55c4a1e3e1d5ad0c8be = L.marker(
+                [-28.3908, -49.3905],
+                {
+}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            var icon_2442ea510aa94aca91fadeb5b482c23a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "book",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4003da6906c9a7c8e02bbfac6d84ebe1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3f5ab6f3f89870ae22c0cb2fbaeef56f = $(`<div id="html_3f5ab6f3f89870ae22c0cb2fbaeef56f" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1e1e24; color: #ffffff; border-radius: 8px; border: 1px solid #2d2d3a; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #39ff14; font-size: 13px; font-weight: bold; border-bottom: 1px solid #2d2d3a; padding-bottom: 4px;">EEB Visconde de Taunay</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Tipo:</b> Escola</p>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Bairro:</b> Sumaré</p>             <p style="margin: 5px 0 0 0; font-size: 9px; color: #888888; font-family: monospace;">-28.39080, -49.39050</p>         </div>         </div>`)[0];
+                popup_4003da6906c9a7c8e02bbfac6d84ebe1.setContent(html_3f5ab6f3f89870ae22c0cb2fbaeef56f);
+            
+        
+
+        marker_af64eec40615e55c4a1e3e1d5ad0c8be.bindPopup(popup_4003da6906c9a7c8e02bbfac6d84ebe1)
+        ;
+
+        
+    
+    
+            marker_af64eec40615e55c4a1e3e1d5ad0c8be.bindTooltip(
+                `<div>
+                     EEB Visconde de Taunay
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_af64eec40615e55c4a1e3e1d5ad0c8be.setIcon(icon_2442ea510aa94aca91fadeb5b482c23a);
+            
+    
+            var marker_4a24408caf040528d5effeb05c6fb57e = L.marker(
+                [-28.3942, -49.398],
+                {
+}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            var icon_47415c185fbbae73b14b2c5bee7a4a47 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "book",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_36b3dffb528c6dbc8e8cc662c6e6e04e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e81a8c093929d6cec0fe883d919bd450 = $(`<div id="html_e81a8c093929d6cec0fe883d919bd450" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1e1e24; color: #ffffff; border-radius: 8px; border: 1px solid #2d2d3a; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #39ff14; font-size: 13px; font-weight: bold; border-bottom: 1px solid #2d2d3a; padding-bottom: 4px;">EEB Walter Holthausen</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Tipo:</b> Escola</p>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Bairro:</b> Cairu</p>             <p style="margin: 5px 0 0 0; font-size: 9px; color: #888888; font-family: monospace;">-28.39420, -49.39800</p>         </div>         </div>`)[0];
+                popup_36b3dffb528c6dbc8e8cc662c6e6e04e.setContent(html_e81a8c093929d6cec0fe883d919bd450);
+            
+        
+
+        marker_4a24408caf040528d5effeb05c6fb57e.bindPopup(popup_36b3dffb528c6dbc8e8cc662c6e6e04e)
+        ;
+
+        
+    
+    
+            marker_4a24408caf040528d5effeb05c6fb57e.bindTooltip(
+                `<div>
+                     EEB Walter Holthausen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4a24408caf040528d5effeb05c6fb57e.setIcon(icon_47415c185fbbae73b14b2c5bee7a4a47);
+            
+    
+            var marker_cdb3c0e328d6d10b81c68c350d07ec13 = L.marker(
+                [-28.3888, -49.39],
+                {
+}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            var icon_c09a4d63baf8e1b5ccc7c648029b20eb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "book",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_72eab4ee90c464d032728d72000bd32b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6adf1255d2ad79a81b8bd578d602fdde = $(`<div id="html_6adf1255d2ad79a81b8bd578d602fdde" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1e1e24; color: #ffffff; border-radius: 8px; border: 1px solid #2d2d3a; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #39ff14; font-size: 13px; font-weight: bold; border-bottom: 1px solid #2d2d3a; padding-bottom: 4px;">E.M. Hilário Pescador</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Tipo:</b> Escola</p>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Bairro:</b> Sumaré</p>             <p style="margin: 5px 0 0 0; font-size: 9px; color: #888888; font-family: monospace;">-28.38880, -49.39000</p>         </div>         </div>`)[0];
+                popup_72eab4ee90c464d032728d72000bd32b.setContent(html_6adf1255d2ad79a81b8bd578d602fdde);
+            
+        
+
+        marker_cdb3c0e328d6d10b81c68c350d07ec13.bindPopup(popup_72eab4ee90c464d032728d72000bd32b)
+        ;
+
+        
+    
+    
+            marker_cdb3c0e328d6d10b81c68c350d07ec13.bindTooltip(
+                `<div>
+                     E.M. Hilário Pescador
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cdb3c0e328d6d10b81c68c350d07ec13.setIcon(icon_c09a4d63baf8e1b5ccc7c648029b20eb);
+            
+    
+            var marker_17f11bb430898a5c8fccc79d7f334bad = L.marker(
+                [-28.414, -49.412],
+                {
+}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            var icon_d2b2637dd89d0d781ab8cb8dfcdd5b51 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "book",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cdfdcbbf14e7f521cfbb8c8f90e8a20c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_843aa1ea715e08132832610441a107eb = $(`<div id="html_843aa1ea715e08132832610441a107eb" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1e1e24; color: #ffffff; border-radius: 8px; border: 1px solid #2d2d3a; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #39ff14; font-size: 13px; font-weight: bold; border-bottom: 1px solid #2d2d3a; padding-bottom: 4px;">E.M. Profª Emília Mamede Soares</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Tipo:</b> Escola</p>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Bairro:</b> Barro Branco</p>             <p style="margin: 5px 0 0 0; font-size: 9px; color: #888888; font-family: monospace;">-28.41400, -49.41200</p>         </div>         </div>`)[0];
+                popup_cdfdcbbf14e7f521cfbb8c8f90e8a20c.setContent(html_843aa1ea715e08132832610441a107eb);
+            
+        
+
+        marker_17f11bb430898a5c8fccc79d7f334bad.bindPopup(popup_cdfdcbbf14e7f521cfbb8c8f90e8a20c)
+        ;
+
+        
+    
+    
+            marker_17f11bb430898a5c8fccc79d7f334bad.bindTooltip(
+                `<div>
+                     E.M. Profª Emília Mamede Soares
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_17f11bb430898a5c8fccc79d7f334bad.setIcon(icon_d2b2637dd89d0d781ab8cb8dfcdd5b51);
+            
+    
+            var marker_e843d34e8c1e523734156fd4136ef58c = L.marker(
+                [-28.3908, -49.3993],
+                {
+}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            var icon_89e99cbf27c453684e046383c06499ec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_db0e56d7033c958b4cbd8276eb76ac09 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5d356d15f9c2e69b885232b513650562 = $(`<div id="html_5d356d15f9c2e69b885232b513650562" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1e1e24; color: #ffffff; border-radius: 8px; border: 1px solid #2d2d3a; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #ffb703; font-size: 13px; font-weight: bold; border-bottom: 1px solid #2d2d3a; padding-bottom: 4px;">CEI Irani Vargas</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Tipo:</b> Creche</p>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Bairro:</b> Cairu</p>             <p style="margin: 5px 0 0 0; font-size: 9px; color: #888888; font-family: monospace;">-28.39080, -49.39930</p>         </div>         </div>`)[0];
+                popup_db0e56d7033c958b4cbd8276eb76ac09.setContent(html_5d356d15f9c2e69b885232b513650562);
+            
+        
+
+        marker_e843d34e8c1e523734156fd4136ef58c.bindPopup(popup_db0e56d7033c958b4cbd8276eb76ac09)
+        ;
+
+        
+    
+    
+            marker_e843d34e8c1e523734156fd4136ef58c.bindTooltip(
+                `<div>
+                     CEI Irani Vargas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e843d34e8c1e523734156fd4136ef58c.setIcon(icon_89e99cbf27c453684e046383c06499ec);
+            
+    
+            var marker_98aaafdfb5c07a549eed5b3f4b230067 = L.marker(
+                [-28.414, -49.412],
+                {
+}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            var icon_4bd7b46c28784b70c90a6ee94772320c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dcebcab19f72bf31b9e7993ad48a9c63 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7fffcca1bdba07aad7d4afd9ef402ba1 = $(`<div id="html_7fffcca1bdba07aad7d4afd9ef402ba1" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1e1e24; color: #ffffff; border-radius: 8px; border: 1px solid #2d2d3a; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #ffb703; font-size: 13px; font-weight: bold; border-bottom: 1px solid #2d2d3a; padding-bottom: 4px;">CEI Criança Feliz</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Tipo:</b> Creche</p>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Bairro:</b> Barro Branco</p>             <p style="margin: 5px 0 0 0; font-size: 9px; color: #888888; font-family: monospace;">-28.41400, -49.41200</p>         </div>         </div>`)[0];
+                popup_dcebcab19f72bf31b9e7993ad48a9c63.setContent(html_7fffcca1bdba07aad7d4afd9ef402ba1);
+            
+        
+
+        marker_98aaafdfb5c07a549eed5b3f4b230067.bindPopup(popup_dcebcab19f72bf31b9e7993ad48a9c63)
+        ;
+
+        
+    
+    
+            marker_98aaafdfb5c07a549eed5b3f4b230067.bindTooltip(
+                `<div>
+                     CEI Criança Feliz
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_98aaafdfb5c07a549eed5b3f4b230067.setIcon(icon_4bd7b46c28784b70c90a6ee94772320c);
+            
+    
+            var marker_1360a43724b28e2863112ef6363e4b13 = L.marker(
+                [-28.392, -49.395],
+                {
+}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            var icon_356739ef98c1e3fc95849296dc009b6a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8c8d234f342afd1242889f519aeaa7ac = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_947c65e91f6f52fbc07f0bf8f2081eff = $(`<div id="html_947c65e91f6f52fbc07f0bf8f2081eff" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1e1e24; color: #ffffff; border-radius: 8px; border: 1px solid #2d2d3a; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #8338ec; font-size: 13px; font-weight: bold; border-bottom: 1px solid #2d2d3a; padding-bottom: 4px;">CRAS Manoel João Nasário</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Tipo:</b> Social/Psi</p>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Bairro:</b> Centro</p>             <p style="margin: 5px 0 0 0; font-size: 9px; color: #888888; font-family: monospace;">-28.39200, -49.39500</p>         </div>         </div>`)[0];
+                popup_8c8d234f342afd1242889f519aeaa7ac.setContent(html_947c65e91f6f52fbc07f0bf8f2081eff);
+            
+        
+
+        marker_1360a43724b28e2863112ef6363e4b13.bindPopup(popup_8c8d234f342afd1242889f519aeaa7ac)
+        ;
+
+        
+    
+    
+            marker_1360a43724b28e2863112ef6363e4b13.bindTooltip(
+                `<div>
+                     CRAS Manoel João Nasário
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1360a43724b28e2863112ef6363e4b13.setIcon(icon_356739ef98c1e3fc95849296dc009b6a);
+            
+    
+            var marker_113329bf586ac9699dc0cf5fe9766d4a = L.marker(
+                [-28.3930151, -49.3954547],
+                {
+}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            var icon_b95a898bedf96c4e4de4c88a3425318a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "gold",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_20507a54c40fbb3990ffb202fb40960a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_39fbccb4e9c15c57a43f70ff08fbba68 = $(`<div id="html_39fbccb4e9c15c57a43f70ff08fbba68" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1a1b2f; color: #ffffff; border-radius: 8px; border: 1px solid #3f51b5; min-width: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #ffd700; font-size: 13px; font-weight: bold; border-bottom: 1px solid #3f51b5; padding-bottom: 4px;">Ponto de Referência</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;">Ref 1: Prefeitura Municipal (Centro)</p>         </div>         </div>`)[0];
+                popup_20507a54c40fbb3990ffb202fb40960a.setContent(html_39fbccb4e9c15c57a43f70ff08fbba68);
+            
+        
+
+        marker_113329bf586ac9699dc0cf5fe9766d4a.bindPopup(popup_20507a54c40fbb3990ffb202fb40960a)
+        ;
+
+        
+    
+    
+            marker_113329bf586ac9699dc0cf5fe9766d4a.bindTooltip(
+                `<div>
+                     Ref 1: Prefeitura Municipal (Centro)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_113329bf586ac9699dc0cf5fe9766d4a.setIcon(icon_b95a898bedf96c4e4de4c88a3425318a);
+            
+    
+            var marker_0a5ca93b40266c9a9e20c3d5ccf7ffa5 = L.marker(
+                [-28.413958, -49.4116196],
+                {
+}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            var icon_ce14db2986132a0bad2fa13a8a05dd32 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "gold",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5b4013ba0cdb4d023f3c910a32887fa0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c58b2a0b7b541c92863f64652298b0f0 = $(`<div id="html_c58b2a0b7b541c92863f64652298b0f0" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1a1b2f; color: #ffffff; border-radius: 8px; border: 1px solid #3f51b5; min-width: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #ffd700; font-size: 13px; font-weight: bold; border-bottom: 1px solid #3f51b5; padding-bottom: 4px;">Ponto de Referência</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;">Ref 2: Praça da Igreja (Barro Branco)</p>         </div>         </div>`)[0];
+                popup_5b4013ba0cdb4d023f3c910a32887fa0.setContent(html_c58b2a0b7b541c92863f64652298b0f0);
+            
+        
+
+        marker_0a5ca93b40266c9a9e20c3d5ccf7ffa5.bindPopup(popup_5b4013ba0cdb4d023f3c910a32887fa0)
+        ;
+
+        
+    
+    
+            marker_0a5ca93b40266c9a9e20c3d5ccf7ffa5.bindTooltip(
+                `<div>
+                     Ref 2: Praça da Igreja (Barro Branco)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0a5ca93b40266c9a9e20c3d5ccf7ffa5.setIcon(icon_ce14db2986132a0bad2fa13a8a05dd32);
+            
+    
+            var marker_8df946f7d28a51e8d1a9c9bdb5bfed91 = L.marker(
+                [-28.3812541, -49.4382609],
+                {
+}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            var icon_71692ab10e6f9d3a2ab7c584c76dd606 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "gold",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ffc27711cdddf8f410c5949414a73a03 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d946791b29ab4da27f1aeeabcc28c514 = $(`<div id="html_d946791b29ab4da27f1aeeabcc28c514" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1a1b2f; color: #ffffff; border-radius: 8px; border: 1px solid #3f51b5; min-width: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #ffd700; font-size: 13px; font-weight: bold; border-bottom: 1px solid #3f51b5; padding-bottom: 4px;">Ponto de Referência</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;">Ref 3: Praça da Igreja (Guatá)</p>         </div>         </div>`)[0];
+                popup_ffc27711cdddf8f410c5949414a73a03.setContent(html_d946791b29ab4da27f1aeeabcc28c514);
+            
+        
+
+        marker_8df946f7d28a51e8d1a9c9bdb5bfed91.bindPopup(popup_ffc27711cdddf8f410c5949414a73a03)
+        ;
+
+        
+    
+    
+            marker_8df946f7d28a51e8d1a9c9bdb5bfed91.bindTooltip(
+                `<div>
+                     Ref 3: Praça da Igreja (Guatá)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8df946f7d28a51e8d1a9c9bdb5bfed91.setIcon(icon_71692ab10e6f9d3a2ab7c584c76dd606);
+            
+    
+            var poly_line_41dcd4b376357e0054f240427ea8f322 = L.polyline(
+                [[-28.3930151, -49.3954547], [-28.3933024, -49.3955603], [-28.3937084, -49.3962561], [-28.3938465, -49.3964912], [-28.3941634, -49.3970338], [-28.3944501, -49.3975248], [-28.3939873, -49.3980714]],
+                {"bubblingMouseEvents": true, "color": "#ff007f", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#ff007f", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5.0}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            poly_line_41dcd4b376357e0054f240427ea8f322.bindTooltip(
+                `<div>
+                     Rota Ref 1: Prefeitura Municipal -> Escola (338.6 m)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_7040d9f2f1dd1b1ab8830ee2871f8637 = L.polyline(
+                [[-28.3930151, -49.3954547], [-28.391918, -49.3960187], [-28.3910302, -49.3964464], [-28.3904247, -49.3967801], [-28.3904753, -49.3986863], [-28.390493, -49.3993524]],
+                {"bubblingMouseEvents": true, "color": "#ff007f", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#ff007f", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5.0}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            poly_line_7040d9f2f1dd1b1ab8830ee2871f8637.bindTooltip(
+                `<div>
+                     Rota Ref 1: Prefeitura Municipal -> Creche (568.0 m)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_128937d38dc77462e7e3091204b86588 = L.polyline(
+                [[-28.3930151, -49.3954547], [-28.391918, -49.3960187], [-28.3915142, -49.3951406]],
+                {"bubblingMouseEvents": true, "color": "#ff007f", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#ff007f", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5.0}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            poly_line_128937d38dc77462e7e3091204b86588.bindTooltip(
+                `<div>
+                     Rota Ref 1: Prefeitura Municipal -> Social/Psi (231.2 m)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_5a06489060bfd95fd16606e39a07d472 = L.polyline(
+                [[-28.3930151, -49.3954547], [-28.391918, -49.3960187], [-28.3915142, -49.3951406], [-28.391131, -49.3943781], [-28.3907494, -49.3936187]],
+                {"bubblingMouseEvents": true, "color": "#ff007f", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#ff007f", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5.0}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            poly_line_5a06489060bfd95fd16606e39a07d472.bindTooltip(
+                `<div>
+                     Rota Ref 1: Prefeitura Municipal -> Saúde (402.7 m)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_ff272c06ae5387ad74e31a4e2ac16bde = L.polyline(
+                [[-28.3930151, -49.3954547], [-28.3933024, -49.3955603], [-28.3937084, -49.3962561], [-28.3938465, -49.3964912], [-28.3941634, -49.3970338]],
+                {"bubblingMouseEvents": true, "color": "#ff007f", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#ff007f", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5.0}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            poly_line_ff272c06ae5387ad74e31a4e2ac16bde.bindTooltip(
+                `<div>
+                     Rota Ref 1: Prefeitura Municipal -> Hospital (206.8 m)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e6c1f72709ca47c42048a0d7f31fdee9 = L.polyline(
+                [[-28.413958, -49.4116196]],
+                {"bubblingMouseEvents": true, "color": "#00f0ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#00f0ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5.0}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            poly_line_e6c1f72709ca47c42048a0d7f31fdee9.bindTooltip(
+                `<div>
+                     Rota Ref 2: Praça da Igreja -> Escola (0.0 m)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_a65ae5a7aae9becc81537747e8a151bb = L.polyline(
+                [[-28.413958, -49.4116196]],
+                {"bubblingMouseEvents": true, "color": "#00f0ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#00f0ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5.0}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            poly_line_a65ae5a7aae9becc81537747e8a151bb.bindTooltip(
+                `<div>
+                     Rota Ref 2: Praça da Igreja -> Creche (0.0 m)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_bf48122df52c6b2230c66e132a837d2a = L.polyline(
+                [[-28.413958, -49.4116196], [-28.4138306, -49.4114372], [-28.4135688, -49.4103133], [-28.4134439, -49.4097465], [-28.4120143, -49.4073216], [-28.4113489, -49.4069802], [-28.4106432, -49.4062405], [-28.4069267, -49.4067204], [-28.406012, -49.4064191], [-28.4053928, -49.4056112], [-28.405326, -49.4052241], [-28.4052946, -49.4050423], [-28.4051911, -49.404409], [-28.4052148, -49.4032371], [-28.4042029, -49.4019466], [-28.4030018, -49.4005792], [-28.400624, -49.3986794], [-28.3972354, -49.3982546], [-28.3969132, -49.398116], [-28.3965863, -49.3977542], [-28.3964659, -49.3975257], [-28.3961464, -49.3962021], [-28.3959758, -49.3959397], [-28.3958562, -49.3958722], [-28.3953621, -49.3964676], [-28.3950745, -49.3968009], [-28.3944501, -49.3975248], [-28.3941634, -49.3970338], [-28.3931549, -49.3974762], [-28.3929659, -49.397103], [-28.3927036, -49.3968684], [-28.391918, -49.3960187], [-28.3915142, -49.3951406]],
+                {"bubblingMouseEvents": true, "color": "#00f0ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#00f0ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5.0}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            poly_line_bf48122df52c6b2230c66e132a837d2a.bindTooltip(
+                `<div>
+                     Rota Ref 2: Praça da Igreja -> Social/Psi (3626.3 m)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_9687e57f69bc801dd5c7171dc8ec462b = L.polyline(
+                [[-28.413958, -49.4116196]],
+                {"bubblingMouseEvents": true, "color": "#00f0ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#00f0ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5.0}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            poly_line_9687e57f69bc801dd5c7171dc8ec462b.bindTooltip(
+                `<div>
+                     Rota Ref 2: Praça da Igreja -> Saúde (0.0 m)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_5f329acf39f440f5508b64cfec5a5884 = L.polyline(
+                [[-28.413958, -49.4116196], [-28.4138306, -49.4114372], [-28.4135688, -49.4103133], [-28.4134439, -49.4097465], [-28.4120143, -49.4073216], [-28.4113489, -49.4069802], [-28.4106432, -49.4062405], [-28.4069267, -49.4067204], [-28.406012, -49.4064191], [-28.4053928, -49.4056112], [-28.405326, -49.4052241], [-28.4052946, -49.4050423], [-28.4051911, -49.404409], [-28.4052148, -49.4032371], [-28.4042029, -49.4019466], [-28.4030018, -49.4005792], [-28.400624, -49.3986794], [-28.3972354, -49.3982546], [-28.3969132, -49.398116], [-28.3965863, -49.3977542], [-28.3964659, -49.3975257], [-28.3961464, -49.3962021], [-28.3959758, -49.3959397], [-28.3958562, -49.3958722], [-28.3953621, -49.3964676], [-28.3950745, -49.3968009], [-28.3944501, -49.3975248], [-28.3941634, -49.3970338]],
+                {"bubblingMouseEvents": true, "color": "#00f0ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#00f0ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5.0}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            poly_line_5f329acf39f440f5508b64cfec5a5884.bindTooltip(
+                `<div>
+                     Rota Ref 2: Praça da Igreja -> Hospital (3203.9 m)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_9a5824857f4636ba24ef4b6ff22ded3e = L.polyline(
+                [[-28.3812541, -49.4382609], [-28.3812478, -49.4374967], [-28.3824064, -49.4362865], [-28.382838, -49.4357547], [-28.383513, -49.4350672], [-28.3843395, -49.4275538], [-28.3859267, -49.4262688], [-28.3861809, -49.4263251], [-28.3892971, -49.4174052], [-28.390582, -49.4069228], [-28.391608, -49.4053386], [-28.3927341, -49.4035661], [-28.3928932, -49.4032135], [-28.392911, -49.403168], [-28.3929807, -49.4028838], [-28.3929903, -49.399899], [-28.3938464, -49.3987581], [-28.3938914, -49.3985965], [-28.3939873, -49.3980714]],
+                {"bubblingMouseEvents": true, "color": "#39ff14", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#39ff14", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5.0}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            poly_line_9a5824857f4636ba24ef4b6ff22ded3e.bindTooltip(
+                `<div>
+                     Rota Ref 3: Praça da Igreja -> Escola (4830.1 m)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_43403af509c8ac8c9ea78f4bec9db336 = L.polyline(
+                [[-28.3812541, -49.4382609], [-28.3812478, -49.4374967], [-28.3824064, -49.4362865], [-28.382838, -49.4357547], [-28.383513, -49.4350672], [-28.3843395, -49.4275538], [-28.3859267, -49.4262688], [-28.3861809, -49.4263251], [-28.3892971, -49.4174052], [-28.390582, -49.4069228], [-28.391608, -49.4053386], [-28.3927341, -49.4035661], [-28.3928932, -49.4032135], [-28.392911, -49.403168], [-28.3929807, -49.4028838], [-28.3929903, -49.399899], [-28.3927039, -49.399568], [-28.391975, -49.4005997], [-28.3913612, -49.4000642], [-28.3912223, -49.3999403], [-28.3905143, -49.4001543], [-28.390493, -49.3993524]],
+                {"bubblingMouseEvents": true, "color": "#39ff14", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#39ff14", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5.0}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            poly_line_43403af509c8ac8c9ea78f4bec9db336.bindTooltip(
+                `<div>
+                     Rota Ref 3: Praça da Igreja -> Creche (5051.9 m)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_274e07a17b3f7c17402d51325bc7540f = L.polyline(
+                [[-28.3812541, -49.4382609], [-28.3812478, -49.4374967], [-28.3824064, -49.4362865], [-28.382838, -49.4357547], [-28.383513, -49.4350672], [-28.3843395, -49.4275538], [-28.3859267, -49.4262688], [-28.3861809, -49.4263251], [-28.3892971, -49.4174052], [-28.390582, -49.4069228], [-28.391608, -49.4053386], [-28.3927341, -49.4035661], [-28.3928932, -49.4032135], [-28.392911, -49.403168], [-28.3929807, -49.4028838], [-28.3929903, -49.399899], [-28.3927039, -49.399568], [-28.3924615, -49.3993517], [-28.3920865, -49.3990172], [-28.3926038, -49.3973306], [-28.3927036, -49.3968684], [-28.391918, -49.3960187], [-28.3915142, -49.3951406]],
+                {"bubblingMouseEvents": true, "color": "#39ff14", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#39ff14", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5.0}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            poly_line_274e07a17b3f7c17402d51325bc7540f.bindTooltip(
+                `<div>
+                     Rota Ref 3: Praça da Igreja -> Social/Psi (5186.4 m)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_58a07e8318f0cc9547e5469bb1f0125a = L.polyline(
+                [[-28.3812541, -49.4382609]],
+                {"bubblingMouseEvents": true, "color": "#39ff14", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#39ff14", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5.0}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            poly_line_58a07e8318f0cc9547e5469bb1f0125a.bindTooltip(
+                `<div>
+                     Rota Ref 3: Praça da Igreja -> Saúde (0.0 m)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_25860c34577d29b747be7aaf0ad30092 = L.polyline(
+                [[-28.3812541, -49.4382609], [-28.3812478, -49.4374967], [-28.3824064, -49.4362865], [-28.382838, -49.4357547], [-28.383513, -49.4350672], [-28.3843395, -49.4275538], [-28.3859267, -49.4262688], [-28.3861809, -49.4263251], [-28.3892971, -49.4174052], [-28.390582, -49.4069228], [-28.391608, -49.4053386], [-28.3927341, -49.4035661], [-28.3928932, -49.4032135], [-28.392911, -49.403168], [-28.3929807, -49.4028838], [-28.3929903, -49.399899], [-28.3938464, -49.3987581], [-28.3938914, -49.3985965], [-28.3939873, -49.3980714], [-28.3944501, -49.3975248], [-28.3941634, -49.3970338]],
+                {"bubblingMouseEvents": true, "color": "#39ff14", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#39ff14", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5.0}
+            ).addTo(map_20d86079869548c8d3511c6633981ba6);
+        
+    
+            poly_line_25860c34577d29b747be7aaf0ad30092.bindTooltip(
+                `<div>
+                     Rota Ref 3: Praça da Igreja -> Hospital (4962.0 m)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
