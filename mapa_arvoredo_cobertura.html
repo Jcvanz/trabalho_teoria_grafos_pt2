@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c913b67636b8baf038f8becb9a7a743e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c913b67636b8baf038f8becb9a7a743e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c913b67636b8baf038f8becb9a7a743e = L.map(
+                "map_c913b67636b8baf038f8becb9a7a743e",
+                {
+                    center: [-27.075508, -52.457085],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f15fe600b24cca28c96e5d10a5cb8507 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f15fe600b24cca28c96e5d10a5cb8507.addTo(map_c913b67636b8baf038f8becb9a7a743e);
+        
+    
+            var marker_4026a42ba6345c2d5b9362cb11bf61f4 = L.marker(
+                [-27.073, -52.4503],
+                {
+}
+            ).addTo(map_c913b67636b8baf038f8becb9a7a743e);
+        
+    
+            var icon_e3b9aa4aa685390dcd0b5d11613eb915 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4a3d5ca9ef73a12b2f5f1605980b3ff4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_08c58f8e8d4502a7096ba0459f427b4b = $(`<div id="html_08c58f8e8d4502a7096ba0459f427b4b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1e1e24; color: #ffffff; border-radius: 8px; border: 1px solid #2d2d3a; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #00bfff; font-size: 13px; font-weight: bold; border-bottom: 1px solid #2d2d3a; padding-bottom: 4px;">Centro Municipal de Saúde de Arvoredo (UBS)</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Tipo:</b> Saúde</p>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Bairro:</b> Setor Nordeste</p>             <p style="margin: 5px 0 0 0; font-size: 9px; color: #888888; font-family: monospace;">-27.07300, -52.45030</p>         </div>         </div>`)[0];
+                popup_4a3d5ca9ef73a12b2f5f1605980b3ff4.setContent(html_08c58f8e8d4502a7096ba0459f427b4b);
+            
+        
+
+        marker_4026a42ba6345c2d5b9362cb11bf61f4.bindPopup(popup_4a3d5ca9ef73a12b2f5f1605980b3ff4)
+        ;
+
+        
+    
+    
+            marker_4026a42ba6345c2d5b9362cb11bf61f4.bindTooltip(
+                `<div>
+                     Centro Municipal de Saúde de Arvoredo (UBS)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4026a42ba6345c2d5b9362cb11bf61f4.setIcon(icon_e3b9aa4aa685390dcd0b5d11613eb915);
+            
+    
+            var marker_552f1381c5242b0b50d09a4203abd2d1 = L.marker(
+                [-27.073, -52.4503],
+                {
+}
+            ).addTo(map_c913b67636b8baf038f8becb9a7a743e);
+        
+    
+            var icon_e48f8abce84625d571cc77b5cbf3332e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_91165d899ee682a9173220c9478e7110 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_033bb03cb78c9af787342b16e606eb5f = $(`<div id="html_033bb03cb78c9af787342b16e606eb5f" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1e1e24; color: #ffffff; border-radius: 8px; border: 1px solid #2d2d3a; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #ff0055; font-size: 13px; font-weight: bold; border-bottom: 1px solid #2d2d3a; padding-bottom: 4px;">Unidade Avançada/Ambulatório de Emergência 24h</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Tipo:</b> Hospital</p>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Bairro:</b> Setor Nordeste</p>             <p style="margin: 5px 0 0 0; font-size: 9px; color: #888888; font-family: monospace;">-27.07300, -52.45030</p>         </div>         </div>`)[0];
+                popup_91165d899ee682a9173220c9478e7110.setContent(html_033bb03cb78c9af787342b16e606eb5f);
+            
+        
+
+        marker_552f1381c5242b0b50d09a4203abd2d1.bindPopup(popup_91165d899ee682a9173220c9478e7110)
+        ;
+
+        
+    
+    
+            marker_552f1381c5242b0b50d09a4203abd2d1.bindTooltip(
+                `<div>
+                     Unidade Avançada/Ambulatório de Emergência 24h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_552f1381c5242b0b50d09a4203abd2d1.setIcon(icon_e48f8abce84625d571cc77b5cbf3332e);
+            
+    
+            var marker_2de8fe6fe1ba523de42e11f1214882bd = L.marker(
+                [-27.0759, -52.4558],
+                {
+}
+            ).addTo(map_c913b67636b8baf038f8becb9a7a743e);
+        
+    
+            var icon_4a4e66619553c250a5b58520892d5bac = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "book",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_565352ce68b27d02d26fb40cb2383dce = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1714c867292611893a962f3f89955dea = $(`<div id="html_1714c867292611893a962f3f89955dea" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1e1e24; color: #ffffff; border-radius: 8px; border: 1px solid #2d2d3a; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #39ff14; font-size: 13px; font-weight: bold; border-bottom: 1px solid #2d2d3a; padding-bottom: 4px;">EEB Prof. Bento Gonçalves Cardoso</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Tipo:</b> Escola</p>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Bairro:</b> Setor Sudoeste</p>             <p style="margin: 5px 0 0 0; font-size: 9px; color: #888888; font-family: monospace;">-27.07590, -52.45580</p>         </div>         </div>`)[0];
+                popup_565352ce68b27d02d26fb40cb2383dce.setContent(html_1714c867292611893a962f3f89955dea);
+            
+        
+
+        marker_2de8fe6fe1ba523de42e11f1214882bd.bindPopup(popup_565352ce68b27d02d26fb40cb2383dce)
+        ;
+
+        
+    
+    
+            marker_2de8fe6fe1ba523de42e11f1214882bd.bindTooltip(
+                `<div>
+                     EEB Prof. Bento Gonçalves Cardoso
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2de8fe6fe1ba523de42e11f1214882bd.setIcon(icon_4a4e66619553c250a5b58520892d5bac);
+            
+    
+            var marker_a1e9b813072cc61f625bd6417d2d7acc = L.marker(
+                [-27.0738, -52.4569],
+                {
+}
+            ).addTo(map_c913b67636b8baf038f8becb9a7a743e);
+        
+    
+            var icon_ec1ef69cc21a066b5407d3cf7462a83e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "book",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_348cef841b7c786b965429f296f46122 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3261356856ccf478d4303caa343464e7 = $(`<div id="html_3261356856ccf478d4303caa343464e7" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1e1e24; color: #ffffff; border-radius: 8px; border: 1px solid #2d2d3a; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #39ff14; font-size: 13px; font-weight: bold; border-bottom: 1px solid #2d2d3a; padding-bottom: 4px;">Escola Municipal Arvoredo</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Tipo:</b> Escola</p>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Bairro:</b> Setor Noroeste</p>             <p style="margin: 5px 0 0 0; font-size: 9px; color: #888888; font-family: monospace;">-27.07380, -52.45690</p>         </div>         </div>`)[0];
+                popup_348cef841b7c786b965429f296f46122.setContent(html_3261356856ccf478d4303caa343464e7);
+            
+        
+
+        marker_a1e9b813072cc61f625bd6417d2d7acc.bindPopup(popup_348cef841b7c786b965429f296f46122)
+        ;
+
+        
+    
+    
+            marker_a1e9b813072cc61f625bd6417d2d7acc.bindTooltip(
+                `<div>
+                     Escola Municipal Arvoredo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a1e9b813072cc61f625bd6417d2d7acc.setIcon(icon_ec1ef69cc21a066b5407d3cf7462a83e);
+            
+    
+            var marker_4bec4f2817522c7c1ab56d3b19b47b5e = L.marker(
+                [-27.075, -52.457],
+                {
+}
+            ).addTo(map_c913b67636b8baf038f8becb9a7a743e);
+        
+    
+            var icon_f1160ced48351a61e13440ca247bb6b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5c9e81e9d42338c7b4a7dc63010ffd41 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_24058f36b77b6d4c063a88b5fd6c9946 = $(`<div id="html_24058f36b77b6d4c063a88b5fd6c9946" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1e1e24; color: #ffffff; border-radius: 8px; border: 1px solid #2d2d3a; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #ffb703; font-size: 13px; font-weight: bold; border-bottom: 1px solid #2d2d3a; padding-bottom: 4px;">CEI Municipal Arvoredo</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Tipo:</b> Creche</p>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Bairro:</b> Setor Noroeste</p>             <p style="margin: 5px 0 0 0; font-size: 9px; color: #888888; font-family: monospace;">-27.07500, -52.45700</p>         </div>         </div>`)[0];
+                popup_5c9e81e9d42338c7b4a7dc63010ffd41.setContent(html_24058f36b77b6d4c063a88b5fd6c9946);
+            
+        
+
+        marker_4bec4f2817522c7c1ab56d3b19b47b5e.bindPopup(popup_5c9e81e9d42338c7b4a7dc63010ffd41)
+        ;
+
+        
+    
+    
+            marker_4bec4f2817522c7c1ab56d3b19b47b5e.bindTooltip(
+                `<div>
+                     CEI Municipal Arvoredo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4bec4f2817522c7c1ab56d3b19b47b5e.setIcon(icon_f1160ced48351a61e13440ca247bb6b7);
+            
+    
+            var marker_42a7a498fa0b64ec3c7486d1e6bc43e2 = L.marker(
+                [-27.0738, -52.4569],
+                {
+}
+            ).addTo(map_c913b67636b8baf038f8becb9a7a743e);
+        
+    
+            var icon_2da6032a0245716b396923f419a7748c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3bd6f4939135bde805d1b9c0c17ad78e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2e5af9472e45ff82ceffa2d937972ffb = $(`<div id="html_2e5af9472e45ff82ceffa2d937972ffb" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1e1e24; color: #ffffff; border-radius: 8px; border: 1px solid #2d2d3a; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #8338ec; font-size: 13px; font-weight: bold; border-bottom: 1px solid #2d2d3a; padding-bottom: 4px;">CRAS Arvoredo</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Tipo:</b> Social/Psi</p>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;"><b>Bairro:</b> Setor Noroeste</p>             <p style="margin: 5px 0 0 0; font-size: 9px; color: #888888; font-family: monospace;">-27.07380, -52.45690</p>         </div>         </div>`)[0];
+                popup_3bd6f4939135bde805d1b9c0c17ad78e.setContent(html_2e5af9472e45ff82ceffa2d937972ffb);
+            
+        
+
+        marker_42a7a498fa0b64ec3c7486d1e6bc43e2.bindPopup(popup_3bd6f4939135bde805d1b9c0c17ad78e)
+        ;
+
+        
+    
+    
+            marker_42a7a498fa0b64ec3c7486d1e6bc43e2.bindTooltip(
+                `<div>
+                     CRAS Arvoredo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_42a7a498fa0b64ec3c7486d1e6bc43e2.setIcon(icon_2da6032a0245716b396923f419a7748c);
+            
+    
+            var marker_6249c37dddc612d8a46c4f97ec942ad4 = L.marker(
+                [-27.0735371, -52.4540981],
+                {
+}
+            ).addTo(map_c913b67636b8baf038f8becb9a7a743e);
+        
+    
+            var icon_6e241b10a1133ab768943e4bcdc6723a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkpurple",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5f6f284780817204a9fcf55af1505635 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_43334de411cef79099970650434c5fb1 = $(`<div id="html_43334de411cef79099970650434c5fb1" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1a1b2f; color: #ffffff; border-radius: 8px; border: 1px solid #3f51b5; min-width: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #ffd700; font-size: 13px; font-weight: bold; border-bottom: 1px solid #3f51b5; padding-bottom: 4px;">Ponto de Referência</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;">Ref 1: Prefeitura Municipal (Centro)</p>         </div>         </div>`)[0];
+                popup_5f6f284780817204a9fcf55af1505635.setContent(html_43334de411cef79099970650434c5fb1);
+            
+        
+
+        marker_6249c37dddc612d8a46c4f97ec942ad4.bindPopup(popup_5f6f284780817204a9fcf55af1505635)
+        ;
+
+        
+    
+    
+            marker_6249c37dddc612d8a46c4f97ec942ad4.bindTooltip(
+                `<div>
+                     Ref 1: Prefeitura Municipal (Centro)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6249c37dddc612d8a46c4f97ec942ad4.setIcon(icon_6e241b10a1133ab768943e4bcdc6723a);
+            
+    
+            var circle_2f49e273bab3b12c509d8ed389fa038d = L.circle(
+                [-27.0735371, -52.4540981],
+                {"bubblingMouseEvents": true, "color": "#00f0ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00f0ff", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000, "stroke": true, "weight": 2}
+            ).addTo(map_c913b67636b8baf038f8becb9a7a743e);
+        
+    
+            circle_2f49e273bab3b12c509d8ed389fa038d.bindTooltip(
+                `<div>
+                     Raio 1 km - Ref 1: Prefeitura Municipal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_4230aee031c77732145aa3a9ecfe6bee = L.circle(
+                [-27.0735371, -52.4540981],
+                {"bubblingMouseEvents": true, "color": "#00f0ff", "dashArray": "6, 8", "dashOffset": null, "fill": false, "fillColor": "#00f0ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5000, "stroke": true, "weight": 1.5}
+            ).addTo(map_c913b67636b8baf038f8becb9a7a743e);
+        
+    
+            circle_4230aee031c77732145aa3a9ecfe6bee.bindTooltip(
+                `<div>
+                     Raio 5 km - Ref 1: Prefeitura Municipal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e3055d3fd69b1933f966f3b6f44f4234 = L.marker(
+                [-27.0749105, -52.4567735],
+                {
+}
+            ).addTo(map_c913b67636b8baf038f8becb9a7a743e);
+        
+    
+            var icon_a7eefa42cac2dbd2050573345b7849bd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkpurple",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bb2cdffb14425fc407b3923c816f34d0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fdb41f49f9387f8f142f0d701279b089 = $(`<div id="html_fdb41f49f9387f8f142f0d701279b089" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1a1b2f; color: #ffffff; border-radius: 8px; border: 1px solid #3f51b5; min-width: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #ffd700; font-size: 13px; font-weight: bold; border-bottom: 1px solid #3f51b5; padding-bottom: 4px;">Ponto de Referência</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;">Ref 2: Praça Central (Centro)</p>         </div>         </div>`)[0];
+                popup_bb2cdffb14425fc407b3923c816f34d0.setContent(html_fdb41f49f9387f8f142f0d701279b089);
+            
+        
+
+        marker_e3055d3fd69b1933f966f3b6f44f4234.bindPopup(popup_bb2cdffb14425fc407b3923c816f34d0)
+        ;
+
+        
+    
+    
+            marker_e3055d3fd69b1933f966f3b6f44f4234.bindTooltip(
+                `<div>
+                     Ref 2: Praça Central (Centro)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e3055d3fd69b1933f966f3b6f44f4234.setIcon(icon_a7eefa42cac2dbd2050573345b7849bd);
+            
+    
+            var circle_0f3b7e557981cdda53639e3023a0e0f0 = L.circle(
+                [-27.0749105, -52.4567735],
+                {"bubblingMouseEvents": true, "color": "#ff007f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff007f", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000, "stroke": true, "weight": 2}
+            ).addTo(map_c913b67636b8baf038f8becb9a7a743e);
+        
+    
+            circle_0f3b7e557981cdda53639e3023a0e0f0.bindTooltip(
+                `<div>
+                     Raio 1 km - Ref 2: Praça Central
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_58113a54054715dab870eb85b505a5ef = L.circle(
+                [-27.0749105, -52.4567735],
+                {"bubblingMouseEvents": true, "color": "#ff007f", "dashArray": "6, 8", "dashOffset": null, "fill": false, "fillColor": "#ff007f", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5000, "stroke": true, "weight": 1.5}
+            ).addTo(map_c913b67636b8baf038f8becb9a7a743e);
+        
+    
+            circle_58113a54054715dab870eb85b505a5ef.bindTooltip(
+                `<div>
+                     Raio 5 km - Ref 2: Praça Central
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0f3e3bb39ddc6a302c9d88b8c8bb3f01 = L.marker(
+                [-27.0726254, -52.4478293],
+                {
+}
+            ).addTo(map_c913b67636b8baf038f8becb9a7a743e);
+        
+    
+            var icon_a903af2dd04f35bc501e88bc640c0cd0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkpurple",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_39b176cd55b6b6d5a1bec1cc999677c8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_abd5f485fc80208377253a5866a884e8 = $(`<div id="html_abd5f485fc80208377253a5866a884e8" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; padding: 10px; background-color: #1a1b2f; color: #ffffff; border-radius: 8px; border: 1px solid #3f51b5; min-width: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">             <h4 style="margin: 0 0 6px 0; color: #ffd700; font-size: 13px; font-weight: bold; border-bottom: 1px solid #3f51b5; padding-bottom: 4px;">Ponto de Referência</h4>             <p style="margin: 3px 0 0 0; font-size: 11px; opacity: 0.9;">Ref 3: Pórtico de Entrada (Leste)</p>         </div>         </div>`)[0];
+                popup_39b176cd55b6b6d5a1bec1cc999677c8.setContent(html_abd5f485fc80208377253a5866a884e8);
+            
+        
+
+        marker_0f3e3bb39ddc6a302c9d88b8c8bb3f01.bindPopup(popup_39b176cd55b6b6d5a1bec1cc999677c8)
+        ;
+
+        
+    
+    
+            marker_0f3e3bb39ddc6a302c9d88b8c8bb3f01.bindTooltip(
+                `<div>
+                     Ref 3: Pórtico de Entrada (Leste)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0f3e3bb39ddc6a302c9d88b8c8bb3f01.setIcon(icon_a903af2dd04f35bc501e88bc640c0cd0);
+            
+    
+            var circle_d35a2ba9f586cc58601a23593058c29b = L.circle(
+                [-27.0726254, -52.4478293],
+                {"bubblingMouseEvents": true, "color": "#39ff14", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#39ff14", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000, "stroke": true, "weight": 2}
+            ).addTo(map_c913b67636b8baf038f8becb9a7a743e);
+        
+    
+            circle_d35a2ba9f586cc58601a23593058c29b.bindTooltip(
+                `<div>
+                     Raio 1 km - Ref 3: Pórtico de Entrada
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_67ee84bd87a95e642937a2129025ecce = L.circle(
+                [-27.0726254, -52.4478293],
+                {"bubblingMouseEvents": true, "color": "#39ff14", "dashArray": "6, 8", "dashOffset": null, "fill": false, "fillColor": "#39ff14", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5000, "stroke": true, "weight": 1.5}
+            ).addTo(map_c913b67636b8baf038f8becb9a7a743e);
+        
+    
+            circle_67ee84bd87a95e642937a2129025ecce.bindTooltip(
+                `<div>
+                     Raio 5 km - Ref 3: Pórtico de Entrada
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
